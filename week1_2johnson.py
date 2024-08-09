@@ -3,7 +3,7 @@ n=int(input())
 print("Enter the product IDS")
 product_ids=[]
 def arrange_products(product_ids):
-  for i in range(0,n):
+  for i in range(0,n-1):
     min=i
     for j in range(i+1,n):
       if(product_ids[j]<product_ids[min]):
