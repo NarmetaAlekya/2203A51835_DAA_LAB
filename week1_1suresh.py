@@ -1,21 +1,16 @@
-import numpy as np
-print("enter the books price")
+l = []
+def arrange_books():
+  for i in range(0,len(l)-1):
+      for j in range(0,len(l)-1):
+          if(l[j]>l[j+1]):
+              temp=l[j]
+              l[j]=l[j+1]
+              l[j+1]=temp
+  return l
+print("enter the number of books")
 n=int(input())
-l=[]
-def arrange_books(arr):
-  for i in range(0,n):
-    min=i
-    for j in range(i+1,n):
-      if(arr[j]<arr[min]):
-        min=j
-    arr[i],arr[min]=arr[min],arr[i]
-  return arr
-
-for i in range(0,n):
-  m=int(input())
-  l.append(m)
-arr=np.array(l)
-print(arrange_books(arr))
-
-
-
+print("enter the books price")
+for i in range(0, n):
+    m = int(input())
+    l.append(m)
+print(arrange_books())
