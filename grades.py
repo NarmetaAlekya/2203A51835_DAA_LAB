@@ -1,4 +1,3 @@
-# Function to implement selection sort in descending order
 def selection_sort_descending(lst):
     n = len(lst)
     for i in range(n):
@@ -8,16 +7,11 @@ def selection_sort_descending(lst):
                 max_idx = j
         lst[i], lst[max_idx] = lst[max_idx], lst[i]
     return lst
-
-# Take input from the user
 grades = []
 n = int(input("Enter the number of grades: "))
-
-print("Enter the grades one by one:")
+print("Enter the grades:")
 for _ in range(n):
     grade = int(input())
     grades.append(grade)
-
-# Sort the grades in descending order
 sorted_grades = selection_sort_descending(grades)
-print("Sorted Grades (Highest to Lowest):", sorted_grades)
+print("Sorted Grades:", sorted_grades)
