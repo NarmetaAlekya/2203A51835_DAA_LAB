@@ -1,21 +1,17 @@
-import numpy as np
-
 l = []
 print("Enter the unique barcode")
-n = int(input())
-
 def package():
-  for i in range(0, n):
+  for i in range(0,len(l)-1):
+      for j in range(0,len(l)-1):
+          if(l[j]>l[j+1]):
+              temp=l[j]
+              l[j]=l[j+1]
+              l[j+1]=temp
+  return l
+n=int(input())
+for i in range(0, n):
     m = int(input())
     l.append(m)
-  numbers= np.array(l)
-  for i in range(0,len(numbers)-1):
-      for j in range(0,len(numbers)-1):
-          if(numbers[j]>numbers[j+1]):
-              temp=numbers[j]
-              numbers[j]=numbers[j+1]
-              numbers[j+1]=temp
-  return numbers
 print(package())
 
 
