@@ -1,9 +1,8 @@
-import numpy as np
 print("Enter the number of products")
 n=int(input())
 print("Enter the product IDS")
-l=[]
-def arrange_products(arr):
+product_ids=[]
+def arrange_products(product_ids):
   for i in range(0,n):
     min=i
     for j in range(i+1,n):
@@ -14,8 +13,7 @@ def arrange_products(arr):
 
 for i in range(0,n):
   m=int(input())
-  l.append(m)
-product_ids=np.array(l)
+  product_ids.append(m)
 print(arrange_products(product_ids))
 
 
